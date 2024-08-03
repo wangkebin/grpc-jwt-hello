@@ -28,8 +28,8 @@ import (
 	"os"
 	"time"
 
-	pb "github.com/wangkebin/grpc-jwt-hello/proto"
 	"github.com/wangkebin/grpc-jwt-hello/myjwt"
+	pb "github.com/wangkebin/grpc-jwt-hello/proto"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/metadata"
@@ -40,7 +40,7 @@ const (
 )
 
 var (
-	addr = flag.String("addr", "localhost:50051", "the address to connect to")
+	addr = flag.String("addr", "127.0.0.1:50051", "the address to connect to")
 	name = flag.String("name", defaultName, "Name to greet")
 )
 

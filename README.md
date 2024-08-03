@@ -11,3 +11,13 @@ to test
 ~/go/src/grpc-jwt-hello ➤ go run greater_server/main.go myjwt/ed25519-public.pem 
 ~/go/src/grpc-jwt-hello ➤ go run greater_client/main.go ./myjwt/ed25519-private.pem
 ```
+
+to run server in docker
+```
+docker build . -t jwt-server 
+docker run -p 50051:50051 jwt-server myjwt/ed25519-public.pem
+```
+and client
+```
+go run greater_client/main.go ./myjwt/ed25519-private.pem
+```
